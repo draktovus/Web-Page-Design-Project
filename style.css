@@ -1,0 +1,505 @@
+/* 
+    General Styling
+*/
+:root {
+    --main-bg-color: #4a4a4a;
+    --secondary-bg-color: #363636;
+    --accent-color: #2e54f6;
+    --main-text-color: white;
+    --secondary-text-color: #a0a0a0;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: JetBrains Mono, Arial, Helvetica, sans-serif;
+    /* base background color */
+    background-color: var(--main-bg-color);
+    /* base text color */
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.resume {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+}
+
+br {
+    clear: both;
+}
+
+[class*="-icon"] {
+    background-image: url(github.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    filter: invert(100%);
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.pic {
+    width: 300px;
+}
+
+.pic img {
+    width: 100%;
+}
+
+nav {
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    min-height: 75px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+
+    display: grid;
+    grid-template: 1fr 1fr 1fr / auto 1fr auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+nav .selected {
+    color: aqua;
+}
+
+nav .navigation {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+nav .icons {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.link {
+    color: aqua;
+    text-decoration-style: solid;
+}
+
+.list {
+    text-align: left;
+}
+
+.list ul {
+    display: inline-block;
+    text-align: left;
+}
+
+/* Home Specific Styling*/
+#home-body {
+    display: grid;
+    grid-template: auto 1fr auto / 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+#home-body nav {
+    grid-column: 1 / -1;
+}
+
+#home-header {
+    grid-column: 1 / -1;
+}
+
+#home-body footer {
+    grid-column: 1 / -1;
+}
+
+#home p {
+    text-align: left;
+}
+
+#home p, #home ul {
+    font-family: Montserrat, FiraCode, monospace, sans-serif;
+    font-size: large;
+}
+
+#home .heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+#home-header {
+    display: flex;
+    width: 50vw;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+#home-header h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: whitesmoke;
+    text-shadow: 5px 5px 0px #000;
+}
+
+#home-header h2 {
+    font-weight: 150;
+    text-transform: uppercase;
+}
+
+#home-body .header-text {
+    display: inline-block;
+}
+
+#home-main p {
+    margin: auto;
+    padding: 8px;
+}
+
+
+
+.heading {
+    border-bottom: 1px solid white;
+}
+
+
+.center-text {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+}
+
+.fa-brands {
+    padding: 8px;
+}
+
+footer {
+    background-color: var(--secondary-bg-color);
+    height: 5vh;
+}
+
+#home-body footer {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+}
+
+.alt-list li {
+    list-style-type: circle;
+}
+
+.button {
+    cursor: pointer;
+}
+
+/* projects  styling */
+#projects {
+    margin-top: 0px;
+    font-family: FiraCode Nerd Font Mono, sans-serif;
+}
+
+#projects-header{
+    margin-bottom: 0px;
+}
+
+#projects-header h1 {
+    text-shadow: 5px 5px 0px var(--secondary-bg-color);
+}
+
+#projects .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#projects .project {
+    width: 40%;
+    margin: 20px 20px;
+    background: linear-gradient(to bottom, #404040, #363636);
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, .5) 10px 10px;
+}
+
+#projects .project h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#projects .project img{
+    object-fit: contain;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+}
+
+#projects .project .description .clans {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+    gap: 10px;
+}
+
+
+#projects .project .description .clans .clan .clan-name {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    padding: 8px 8px 8px 12px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000000);
+}
+
+#projects .project .description .clans .clan img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+#projects .project .description .clans .clan {
+    display: flex;
+    flex-direction: row;
+}
+
+[class*="-clan"] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    height: 150px;
+    width: 150px;
+}
+
+.hatake-clan {
+    background-image: url(https://trello.com/1/cards/64304794c3da004d7ca2b1b6/attachments/643048120f1b8d96a271f873/previews/643048150f1b8d96a271f882/download/OGC.gif);
+}
+
+.houki-clan {
+    background-image: url(https://trello.com/1/cards/62bf259d24029106a6a8b76d/attachments/62bf3119fe5a29559b9c52c9/previews/62bf3121fe5a29559b9c5b25/download/tumblr_n925wax8Kc1qfjqf7o1_r1_500.gif);
+}
+
+.momochi-clan {
+    background-image: url(https://trello.com/1/cards/62c1e7b1f75b093fe5cd8a4f/attachments/62c1ed3160b918577895a9e1/previews/62c1ed3d60b918577895beb5/download/OGC.gif);
+}
+
+.tokage-clan {
+    background-image: url(https://trello.com/1/cards/62bf256ab860960999169526/attachments/63a34c4a1c15cb005949247a/previews/63a34c4d1c15cb0059492482/download/R.gif);
+}
+
+.tenshi-clan {
+    background-image: url(https://trello.com/1/cards/62c1e7b98e78f45e0d7057d5/attachments/62efe4ebb197886ae71440c8/previews/62efe4f0b197886ae7144116/download/konan.gif);
+}
+
+.suijoki-clan {
+    background-image: url(https://trello.com/1/cards/62c1e7ae6c8a021deaf972d9/attachments/62c1e9d7c1aecb5696dfe015/previews/62c1e9d9c1aecb5696dfe071/download/OGC.gif);
+}
+
+.kaguya-clan {
+    background-image: url(https://trello.com/1/cards/62bf20a9be82f031b7f963b4/attachments/62bf319c4e07ac6f3751046a/previews/62bf31a14e07ac6f37510d42/download/tumblr_mx1j602kC01szg5ddo1_500.gif);
+}
+
+.akimichi-clan {
+    background-image: url(https://trello.com/1/cards/62bf254c20c1a6500839ec70/attachments/62bf3029fecf61716da1b2a9/previews/62bf302bfecf61716da1b2c7/download/tumblr_inline_orkqz4QMdH1v0ret2_540.gif);
+}
+
+.namikaze-clan {
+    background-image: url(https://trello.com/1/cards/62bf20a20108008622e8ba35/attachments/62c89abd6cbbf78827485116/previews/62c89abf6cbbf78827485152/download/tumblr_mo8tplDZv61rnvb0co1_500.gif);
+}
+
+/* 
+    About Styling
+*/
+
+.custom-container {
+    display: grid;
+    grid-template: auto 1fr auto / 1fr 1fr 1fr 1fr;
+    column-gap: 5em;
+    row-gap: 1em;
+}
+
+#about-body nav {
+    grid-column: 1 / -1;
+}
+
+#about-body aside {
+    grid-column: 1 / 1;
+    margin-left: 50px;
+
+    grid-row: 1fr;
+}
+
+#about-body #about {
+    grid-column: 2/5;
+    margin-right: 50px;
+    display: block;
+
+    grid-row: 1fr;
+}
+
+#about-body footer {
+    grid-column: 1 / -1;
+    text-align: center;
+
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+}
+
+/* 
+    Contact Styling
+*/
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.contact-main .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+
+    width: 67vw;
+    margin: auto;
+}
+
+.content > div {
+    margin: 0 1em;
+    width: fit-content;
+}
+
+.content h4 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.left {
+    border: 1px solid var(--secondary-bg-color);
+    padding: 10px;
+
+    box-shadow: rgba(0, 0, 0, .5) -4px 8px;
+    border-radius: 10px;
+}
+.right {
+    border: 1px solid var(--secondary-bg-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, .5) 4px 8px;
+    width: fit-content;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+form label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+form label p {
+    width: 100px;
+}
+
+form label input {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 30px;
+
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+    background-color: var(--secondary-bg-color);
+    color: var(--main-text-color);
+
+    text-decoration-color: white;
+}
+
+form label textarea {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 30px;
+
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+    background-color: var(--secondary-bg-color);
+    color: var(--main-text-color);
+
+    text-decoration-color: white;
+}
+
+form label:has(textarea) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.content ul li a{
+    text-decoration-style: dashed;
+    color: aqua;
+}
+
+form button {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 4px;
+    border: none;
+
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    
+    background-color: whitesmoke;
+}
